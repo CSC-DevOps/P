@@ -3,8 +3,8 @@ const pathUtil = require("path");
 
 const builder = require('../lib/builder');
 
-exports.command = 'build';
-exports.desc = 'Build virtual machine image';
+exports.command = 'init';
+exports.desc = 'Build ';
 exports.builder = yargs => {
     yargs.options({
         force: {
@@ -20,10 +20,7 @@ exports.builder = yargs => {
 exports.handler = async argv => {
     const { force, image_dir, processor } = argv;
 
-    console.log(chalk.green("Building rootfs"));
-    await builder.buildPackageImage();
-
-    console.log(chalk.green("Building iso"));
+    console.log(chalk.green("Preparing docker builder image"));
     await builder.buildPackageImage();
    
 };
