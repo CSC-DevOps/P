@@ -18,12 +18,13 @@ exports.builder = yargs => {
 
 
 exports.handler = async argv => {
-    const { force, image_dir, processor } = argv;
+    const { sign, image_dir, processor } = argv;
 
+    console.log( chalk.gray( sign ));
     console.log(chalk.green("Building rootfs"));
-    await builder.buildPackageImage();
+    await builder.buildRootfs();
 
-    console.log(chalk.green("Building iso"));
-    await builder.buildPackageImage();
+    // console.log(chalk.green("Building iso"));
+    // await builder.buildPackageImage();
    
 };

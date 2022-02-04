@@ -18,7 +18,7 @@ exports.builder = yargs => {
 
 
 exports.handler = async argv => {
-    const { force, image_dir, processor } = argv;
+    const { processor } = argv;
 
     console.log(chalk.green("Preparing docker builder image"));
     await builder.buildPackageImage();
