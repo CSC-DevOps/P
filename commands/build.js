@@ -22,9 +22,10 @@ exports.handler = async argv => {
 
     console.log( chalk.gray( sign ));
     console.log(chalk.green("Building rootfs"));
+
     await builder.buildRootfs();
 
-    // console.log(chalk.green("Building iso"));
-    // await builder.buildPackageImage();
+    console.log(chalk.green("Building iso"));
+    await builder.packageAsIso();
    
 };
