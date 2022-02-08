@@ -4,7 +4,7 @@ const pathUtil = require("path");
 const builder = require('../lib/builder');
 
 exports.command = 'init';
-exports.desc = 'Build ';
+exports.desc = 'Prepare tool';
 exports.builder = yargs => {
     yargs.options({
     });
