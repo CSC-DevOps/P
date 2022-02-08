@@ -7,12 +7,6 @@ exports.command = 'init';
 exports.desc = 'Build ';
 exports.builder = yargs => {
     yargs.options({
-        force: {
-            alias: 'f',
-            describe: 'Force the old VM to be deleted when provisioning',
-            default: false,
-            type: 'boolean'
-        }
     });
 };
 
